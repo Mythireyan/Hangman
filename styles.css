@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+*{
+	box-sizing: border-box;
+}
+body{
+	background-color: #34495e;
+	color: #fff;
+	font-family: 'Roboto Mono', monospace;
+	display: flex;
+	margin: 0;
+	overflow: hidden;
+	flex-direction: column;
+	align-items: center;
+	height: 80vh;
+}
+
+.game-container{
+	padding: 20px 30px;
+	margin-top:auto; 
+	position: relative;
+	/*display: flex;*/
+	width: 450px;
+	height: 600px;
+}
+
+.wrong-letter-container{
+	display: flex;
+	position: absolute;
+	top: 20%;
+	right: 0%;
+	text-align: center;
+}
+
+.wrong-letter-container p{
+	color:orangered;
+	font-size: 20px;
+}
+
+.wrong-letter-container span{
+	font-size: 25px;
+	letter-spacing: 5px;
+}
+
+.word{
+	margin-top: 20px;
+	display: flex;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
+}
+
+.letter{
+	display: inline-flex;
+	height: 50px;
+	width: 20px;
+	align-items: center;
+	justify-content: center;
+	margin-left: 5px;
+	font-size: 30px;
+	border-bottom: 4px solid #2980b9;
+}
+
+.figure-container{
+	fill:transparent;
+	stroke: #fff;
+	stroke-linecap: round;
+	stroke-width:4px;
+}
+
+.figure-parts{
+	display: none;
+	stroke: red;
+}
+
+.popup-container{
+	background-color: rgba(0,0,0,0.6);
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right:0;
+	/*display: flex;*/
+	align-items: center;
+	justify-content: center;
+	display: none;
+}
+
+.popup{
+	align-items: center;
+	box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
+	padding: 10px 20px;
+	border-radius: 5px;
+	background-color: #2980b9;
+	display: flex;
+	flex-direction: column;
+}
+
+.popup h2{
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: bold;
+	font-size: 22px;
+}
+
+.popup button{
+	cursor: pointer;
+	font-size: 16px;
+	margin-top: 5px;
+	padding: 10px 20px;
+	border:none;
+	border-radius: 5px;
+	background-color:  #132743;
+	color: #fff;
+}
+
+.popup button:active{
+	transform: scaleY(0.92);
+}
+
+.popup button:focus{
+	outline:none;
+}
+
+.notification{
+	background-color: rgba(0,0,0,0.3);
+	padding: 5px 15px;
+	border-radius: 5px 5px 0 0;
+	position: absolute;
+	bottom: -63px;
+	transition: transform .2s ease-in-out;
+}
+
+.notification.show{
+	transform: translateY(-50px);
+}
